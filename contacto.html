@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - Arnez Miranda & Asociados</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles1.css">
+    <script type="module" src="./modules/navbar.js"></script>
+    <script type="module" src="./modules/footer.js"></script>
+    <script type="module" src="./modules/contact.js"></script>
+    <script type="module" src="./modules/articles.js"></script>
+</head>
+
+<body>
+    <app-navbar></app-navbar>
+    <section class="contact-form-section" id="contactanos-section">
+        <h1 class="contact-title">Contáctanos</h1>
+        <h2 class="contact-subtitle">En Whatsapp</h2>
+        <h6>Asegúrate de que WhatsApp Web esté abierto en tu navegador.</h6>
+        <br>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Nombre y apellido</label>
+                <input type="text" id="name" placeholder="Juan García">
+            </div>
+            <div class="form-group">
+                <label for="company">Empresa</label>
+                <input type="text" id="company" placeholder="Olimpo S.R.L.">
+            </div>
+            <div class="form-group">
+                <label for="email">Correo</label>
+                <input type="email" id="email" placeholder="olimpo@gmail.com">
+            </div>
+            <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea id="message" rows="4" placeholder="Ingrese su consulta"></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Enviar</button>
+        </form>
+    </section>
+    <section class="contact-form-section">
+        <h1 class="contact-title">Contáctanos</h1>
+        <h2 class="contact-subtitle">Por Correo Electrónico</h2>
+        <h4>Déjanos un mensaje a este correo y te responderemos lo antes posible.</h4><br>
+        <a href="mailto:sgonzales@arnezmiranda.com.bo" class="contact-link">estudiod.bolivia@gmail.com</a>
+        </div>
+    </section>
+    <app-articles></app-articles>
+    <app-footer></app-footer>
+    <script src="script.js" defer></script>
+    <script src="contact.js" defer></script>
+</body>
+
+</html>

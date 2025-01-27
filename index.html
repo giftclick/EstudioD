@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio D</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles1.css">
+    <script type="module" src="./modules/navbar.js"></script>
+    <script type="module" src="./modules/footer.js"></script>
+    <script type="module" src="./modules/contact.js"></script>
+    <script type="module" src="./modules/articles.js"></script>
+</head>
+
+<body>
+    <app-navbar></app-navbar>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Fotografía con Pasión y Creatividad</h1>
+            <p>Nosotros nos encargamos de los detalles, tú concéntrate en disfrutar el momento. <br>Especialistas en
+                soluciones visuales confiables y efectivas.</p> <a href="contacto.html">Contáctanos</a>
+
+        </div>
+    </div>
+    <app-articles></app-articles>
+    <!-- Segundo Hero con Video -->
+    <div class="hero-video">
+        <div class="hero-video-content">
+            <h1>Momentos Capturados en Movimiento</h1>
+            <p>Descubre nuestras producciones de video y cómo podemos traer tus recuerdos a la vida.</p>
+            <a href="contacto.html">Contáctanos</a>
+        </div>
+        <video class="background-video" autoplay muted loop>
+            <source src="./assets/video.mp4" type="video/mp4">
+            <!-- Puedes añadir más fuentes si es necesario -->
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+    </div>
+    <app-contact></app-contact>
+    <app-footer></app-footer>
+    <script src="script.js" defer></script>
+    <script>
+        const images = [
+            './assets/negocioMAA2.jpg',
+            './assets/hero.avif',
+            './assets/hero1.webp',
+            './assets/hero2.webp'
+        ];
+        let currentIndex = 0;
+
+        function changeBackgroundImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            document.querySelector('.hero').style.backgroundImage = `url('${images[currentIndex]}')`;
+        }
+
+        setInterval(changeBackgroundImage, 5000); // Cambia cada 5 segundos
+    </script>
+</body>
+
+</html>
